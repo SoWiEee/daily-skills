@@ -1,0 +1,14 @@
+slides:
+  - slide: 1
+    section_id: "S1"
+    teaching_claim: ""
+    learner_question: ""
+    teaching_role: ""
+    on_slide_message:
+      title: ""
+      supporting_content:
+        type: "annotations"
+        items: []
+    speaker_notes: []
+    worked_example: null
+    source_refs: []

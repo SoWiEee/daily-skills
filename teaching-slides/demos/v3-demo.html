@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teaching Slides v3 Demo</title>
+<style>
+:root{--bg:#221C34;--fg:#F8F6FB;--muted:#B9B1C6;--accent:#FF595A;--violet:#8A70FF;--cyan:#18C5C8;--surface:rgba(255,255,255,.045);--border:rgba(248,246,251,.16)}
+*{box-sizing:border-box}body{margin:0;background:#120f1c;color:var(--fg);font-family:"Noto Sans TC",sans-serif;overflow:hidden}.viewport{width:100vw;height:100vh;display:grid;place-items:center}.stage{width:1920px;height:1080px;background:var(--bg);transform-origin:center;position:absolute;overflow:hidden}.slide{position:absolute;inset:0;padding:88px 112px;opacity:0;visibility:hidden;pointer-events:none}.slide.active{opacity:1;visibility:visible;pointer-events:auto}.k{font:700 22px/1.2 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.12em}.title{font-size:62px;line-height:1.16;margin:22px 0 0;max-width:20ch}.sub{font-size:30px;line-height:1.5;color:var(--muted);max-width:50ch;margin-top:28px}.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:56px}.panel{border-top:4px solid var(--accent);padding:28px 0 0}.panel.v{border-color:var(--violet)}.panel h2{font-size:36px;margin:0 0 24px}.flow{display:flex;align-items:center;gap:22px;margin-top:70px}.node{border:1px solid var(--border);padding:30px 34px;background:var(--surface);font-size:30px;min-width:260px}.arrow{font-size:54px;color:var(--accent)}.source{position:absolute;left:112px;bottom:54px;font:600 18px/1.4 "JetBrains Mono",monospace;color:var(--muted)}.q{font-size:72px;line-height:1.18;max-width:18ch;margin-top:160px}.hint{position:fixed;bottom:18px;right:24px;color:#aaa;font:14px sans-serif}
+</style>
+</head>
+<body><div class="viewport"><main class="stage" id="stage">
+<section class="slide active"><div class="k">DEMO 01 · SECTION</div><div class="title">先建立 Mental Model，再進細節</div><div class="sub">Section Page 的任務是定位接下來的問題，畫面保留足夠空間，讓學生有一次清楚的注意力重置。</div><div class="source">rhythm: anchor</div></section>
+<section class="slide"><div class="k">DEMO 02 · MATCHED COMPARISON</div><div class="title">同一組問題，左右對照才有比較價值</div><div class="two"><div class="panel v"><h2>Exclusive GPU</h2><div class="sub">一個 Job 取得整張 GPU。Scheduler 主要決定 placement。</div></div><div class="panel"><h2>MPS Sharing</h2><div class="sub">多個 Job 共用 GPU。Scheduler 還要決定每個 Job 的 share。</div></div></div><div class="source">G12 · dense</div></section>
+<section class="slide"><div class="k">DEMO 03 · PROCESS FLOW</div><div class="title">Scheduler 的決策可以拆成可追蹤的階段</div><div class="flow"><div class="node">Filter</div><div class="arrow">→</div><div class="node">Score</div><div class="arrow">→</div><div class="node">Bind</div></div><div class="sub">每個箭頭代表決策順序，不拿箭頭當裝飾。</div><div class="source">G16 · dense</div></section>
+<section class="slide"><div class="k">DEMO 04 · CHECK</div><div class="q">兩個 Job 都能放進 GPU，哪個額外資訊會影響 MPS share 的選擇？</div><div class="sub">這類問題要測到前面 Learning Goal，不能只考名詞記憶。</div><div class="source">G27 · breathing</div></section>
+</main></div><div class="hint">← → 切換頁面</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;function fit(){const s=document.getElementById('stage');const k=Math.min(innerWidth/1920,innerHeight/1080);s.style.transform=`scale(${k})`}function show(n){i=(n+slides.length)%slides.length;slides.forEach((s,j)=>s.classList.toggle('active',j===i))}addEventListener('resize',fit);addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')show(i+1);if(e.key==='ArrowLeft')show(i-1)});fit();
+</script></body></html>

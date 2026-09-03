@@ -1,0 +1,37 @@
+design_lock:
+  status: "approved"
+  canvas:
+    width: 1920
+    height: 1080
+    safe_margin_x: 112
+    safe_margin_y: 88
+  palette:
+    background: "#221C34"
+    foreground: "#F8F6FB"
+    muted: "#B9B1C6"
+    accent_primary: "#FF595A"
+    accent_violet: "#8A70FF"
+    accent_cyan: "#18C5C8"
+    accent_orange: "#F2A65A"
+  typography:
+    cjk: "Noto Sans TC"
+    mono: "JetBrains Mono"
+  geometry:
+    default_gap: 40
+    radius_min: 4
+    radius_max: 10
+  code:
+    font_size_min: 24
+    line_highlight: "accent-left-rule"
+  citation:
+    placement: "bottom"
+    style: "short-label-with-link"
+  rhythm:
+    max_dense_run: 3
+    max_same_composition_run: 3
+  visual_bans:
+    - "identical-card-grid-as-default"
+    - "emoji-bullet-icons"
+    - "decorative-gradient-blobs"
+    - "semantic-free-arrows"
+    - "glassmorphism"

@@ -1,0 +1,18 @@
+qa_report:
+  instructional_qa:
+    status: "pending"
+    learning_goal_coverage: []
+    issues: []
+  visual_qa:
+    status: "pending"
+    overflow_issues: []
+    diagram_issues: []
+    code_issues: []
+    citation_issues: []
+  deck_qa:
+    status: "pending"
+    dense_runs: []
+    repeated_compositions: []
+    style_drift: []
+    ai_tone_issues: []
+  final_status: "pending"

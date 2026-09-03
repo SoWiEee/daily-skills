@@ -1,0 +1,26 @@
+project:
+  title: ""
+  purpose: ""
+  audience:
+    level: ""
+    background: []
+  prior_knowledge: []
+  likely_gaps: []
+  duration_minutes: null
+  reading_first: true
+  learning_goals: []
+  source_material: []
+  source_policy:
+    may_restructure: true
+    may_add_explanations: true
+    may_use_external_sources: false
+  interaction:
+    checks: true
+    exercises: false
+    live_demo: false
+  code_depth:
+    level: "light"
+    languages: []
+  renderer: "auto"
+  constraints: []
+  assumptions: []
