@@ -1,5 +1,7 @@
 # daily-skills
 
+<img width="1192" height="298" alt="圖片" src="https://github.com/user-attachments/assets/95f90de5-7a3f-471b-a9ae-8f69757d0548" />
+
 一組以台灣繁體中文撰寫的 AI skills，協助你整理內在狀態、處理關係與溝通、重新盤點人生方向，以及深入閱讀電腦科學論文。
 
 每個 skill 都是一個包含 `SKILL.md` 的資料夾。AI 工具會先根據 `name` 和 `description` 判斷何時適合使用，再按需要讀取完整指引與 `references/` 裡的輔助資料。
